@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async"
 
 export const SITE_NAME = "Home Staging Visuals"
-export const SITE_URL = "https://bycb.ca"
+export const SITE_URL = "https://www.bycb.ca"
 const OG_IMAGE = `${SITE_URL}/og-image.svg`
 
 function Seo({ title, description, path = "/" }) {
