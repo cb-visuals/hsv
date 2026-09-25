@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme {
+  /* Neutrals are deliberately never pure #000/#fff — a faint cool cast so
+     nothing in the UI reads as an unfinished/placeholder black or white. */
+  --color-primary: #101216;
+  --color-secondary: #dfe1e4;
+  --color-bg: #f8f9fb;
+  --color-bg-secondary: #eef0f3;
+  --color-text-secondary: #48494e;
+  --color-text-muted: #63656c;
+  --color-error: #b3261e;
+  --color-success: #1e6b3e;
+
+  /* Per client feedback: Outfit only, site-wide — Quicksand dropped. Both
+     tokens still exist (rather than collapsing to one) in case the client
+     ever wants to re-differentiate headings from body again. */
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Outfit", sans-serif;
+  /* Logo-only — a distinct variable sans so "Home Staging Visuals" stands
+     apart from the rest of the (deliberately plain) Outfit type. */
+  --font-logo: "Unbounded", sans-serif;
+
+  --radius-button: 999px;
+  --radius-input: 12px;
+  /* Shared by every non-form, non-button rounded element (photo frames,
+     sliders, cards) so they all move together from one place. */
+  --radius-card: 8px;
+
+  /* Typography scale (Section 3) — desktop, used from md: breakpoint up */
+  --text-display: 56px;
+  --text-display--line-height: 64px;
+  --text-h1: 40px;
+  --text-h1--line-height: 48px;
+  --text-h2: 32px;
+  --text-h2--line-height: 40px;
+  --text-h3: 24px;
+  --text-h3--line-height: 32px;
+  --text-h4: 20px;
+  --text-h4--line-height: 28px;
+  --text-body: 16px;
+  --text-body--line-height: 26px;
+  --text-small: 14px;
+  --text-small--line-height: 20px;
+
+  /* Typography scale — mobile default (Section 3 "Mobile scale down") */
+  --text-display-mobile: 32px;
+  --text-display-mobile--line-height: 40px;
+  --text-h1-mobile: 28px;
+  --text-h1-mobile--line-height: 36px;
+  --text-h2-mobile: 24px;
+  --text-h2-mobile--line-height: 32px;
+}
+
+:root {
+  /* Spacing system */
+  --space-unit: 8px;
+  --container-max: 1280px;
+  --section-padding-desktop: 96px;
+  --section-padding-mobile: 48px;
+
+  /* Fallback until Nav measures its real height on mount */
+  --nav-height: 96px;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  /* Client dislikes heavy/bold type — every weight on the site is 100
+     (Outfit Thin). Set once here as the real default rather than relying on
+     every element to opt in, so nothing accidentally inherits the browser's
+     normal (400) weight. */
+  font-weight: 100;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+@keyframes menu-link-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-menu-link {
+  animation: menu-link-in 0.4s ease-out both;
+}
+
+/* Underline that grows in from the left on hover, rather than snapping on —
+   used by the full-screen nav menu's links. currentColor keeps it in sync
+   with whatever text color the link is using (including its own hover
+   color change) with no extra color upkeep. */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.3s ease-out;
+}
+
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-underline {
+    transition: none;
+  }
+}
+
+@keyframes progress-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-menu-link {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
