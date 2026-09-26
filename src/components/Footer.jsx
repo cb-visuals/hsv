@@ -23,9 +23,12 @@ function Footer() {
       <div className="mx-auto flex max-w-[1280px] flex-col gap-12 px-4 py-12 md:px-8 md:py-24">
         <div className="flex flex-col gap-12 md:flex-row md:justify-between">
           <div className="flex flex-col gap-2">
-            <span className="whitespace-nowrap font-logo text-lg font-[300] uppercase tracking-wide text-primary">
-              Home Staging Visuals
-            </span>
+            <div className="flex flex-col font-logo leading-tight">
+              <span className="whitespace-nowrap text-lg font-medium uppercase tracking-wide text-primary">
+                Home Staging Visuals
+              </span>
+              <span className="whitespace-nowrap text-sm font-light text-text-secondary">By Chandra Bradley</span>
+            </div>
             <div className="mt-6">
               <GoogleRating />
             </div>

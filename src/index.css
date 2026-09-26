@@ -19,7 +19,7 @@
   --font-body: "Outfit", sans-serif;
   /* Logo-only — a distinct variable sans so "Home Staging Visuals" stands
      apart from the rest of the (deliberately plain) Outfit type. */
-  --font-logo: "Unbounded", sans-serif;
+  --font-logo: "Montserrat", sans-serif;
 
   --radius-button: 999px;
   --radius-input: 12px;
