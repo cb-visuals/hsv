@@ -76,7 +76,7 @@ function Nav() {
               fit on one line. Desktop always shows both, unaffected. */}
           <NavLink
             to="/"
-            className={`whitespace-nowrap font-logo font-[300] uppercase tracking-normal text-xs sm:tracking-wide sm:text-lg md:text-xl ${
+            className={`whitespace-nowrap font-logo font-[300] uppercase tracking-normal text-sm sm:tracking-wide sm:text-xl ${
               isOpen ? "hidden md:block" : "block"
             } ${isOpen ? "text-bg" : "text-primary"}`}
             onClick={() => {
