@@ -99,7 +99,7 @@ function TestimonialSpotlight({ heading, testimonials }) {
               <p className="line-clamp-5 text-h3 font-thin text-primary md:line-clamp-4 md:text-h2">
                 &ldquo;{active.quote}&rdquo;
               </p>
-              <footer className="mt-6 text-small font-thin uppercase tracking-wide text-text-muted">
+              <footer className="mt-6 text-small font-label uppercase tracking-wide text-text-muted">
                 {formatDisplayName(active.name)}
               </footer>
             </motion.blockquote>

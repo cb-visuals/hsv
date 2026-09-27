@@ -95,7 +95,7 @@ function Portfolio() {
         <p className="mt-4 max-w-xl text-body text-text-muted">A selection of recent project highlights.</p>
         <nav
           aria-label="Portfolio categories"
-          className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-small font-extralight uppercase tracking-wide"
+          className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-small font-label uppercase tracking-wide"
         >
           {portfolioNavLinks.map((link, index) => (
             <span key={link.to} className="flex items-center gap-2">

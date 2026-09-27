@@ -76,29 +76,16 @@ function Nav() {
               fit on one line. Desktop always shows both, unaffected. */}
           <NavLink
             to="/"
-            className={`flex flex-col whitespace-nowrap font-logo leading-tight ${
-              isOpen ? "hidden md:flex" : "flex"
-            }`}
+            className={`whitespace-nowrap font-logo font-[300] uppercase tracking-normal text-xs sm:tracking-wide sm:text-lg md:text-xl ${
+              isOpen ? "hidden md:block" : "block"
+            } ${isOpen ? "text-bg" : "text-primary"}`}
             onClick={() => {
               close()
               const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
               window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" })
             }}
           >
-            <span
-              className={`font-medium uppercase tracking-normal text-xs sm:tracking-wide sm:text-lg md:text-xl ${
-                isOpen ? "text-bg" : "text-primary"
-              }`}
-            >
-              Home Staging Visuals
-            </span>
-            <span
-              className={`font-light text-[10px] sm:text-sm md:text-base ${
-                isOpen ? "text-bg/70" : "text-text-secondary"
-              }`}
-            >
-              By Chandra Bradley
-            </span>
+            Home Staging Visuals
           </NavLink>
 
           <div className="ml-auto flex items-center gap-2">

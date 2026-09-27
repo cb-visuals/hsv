@@ -80,7 +80,7 @@ function About() {
           {stats.map((stat) => (
             <motion.div key={stat.label} variants={scrollReveal} className="w-full sm:w-[calc((100%-4rem)/3)]">
               <p className="text-h1-mobile md:text-h1 font-thin text-primary">{stat.value}</p>
-              <p className="mt-2 text-small font-thin uppercase tracking-wide text-text-muted">{stat.label}</p>
+              <p className="mt-2 text-small font-label uppercase tracking-wide text-text-muted">{stat.label}</p>
             </motion.div>
           ))}
         </RevealGroup>
@@ -97,7 +97,7 @@ function About() {
           </motion.div>
           <motion.div variants={scrollReveal}>
             <h2 className="text-h1-mobile md:text-h1 font-extralight text-primary">Mica</h2>
-            <p className="mt-2 text-small font-thin uppercase tracking-wide text-text-muted">Assistant Director</p>
+            <p className="mt-2 text-small font-label uppercase tracking-wide text-text-muted">Assistant Director</p>
             <p className="mt-4 max-w-md text-body text-text-muted">
               Off-site, you&rsquo;ll usually find Chandra accompanied by her Mini Schnauzer, who proudly
               serves as the studio&rsquo;s official &ldquo;assistant director.&rdquo;

@@ -72,8 +72,8 @@ function Home() {
       />
       <SplitHero
         media={<HeroVideoCarousel />}
-        heading="Staged to sell, styled to impress"
-        subtitle="Home staging and decorating for Toronto and GTA homeowners, real estate agents, and luxury real estate teams."
+        heading="HOME STAGING VISUALS"
+        subtitle="By Chandra Bradley"
       >
         <Button href="/contact">Get in touch</Button>
       </SplitHero>
@@ -83,7 +83,7 @@ function Home() {
           {stats.map((stat) => (
             <motion.div key={stat.label} variants={scrollReveal}>
               <p className="text-h1-mobile md:text-h1 font-thin text-primary">{stat.value}</p>
-              <p className="mt-2 text-small font-thin uppercase tracking-wide text-text-muted">{stat.label}</p>
+              <p className="mt-2 text-small font-label uppercase tracking-wide text-text-muted">{stat.label}</p>
             </motion.div>
           ))}
         </RevealGroup>
@@ -94,7 +94,7 @@ function Home() {
           <RevealGroup className="text-center">
             <motion.p
               variants={scrollReveal}
-              className="text-small font-thin uppercase tracking-wide text-text-muted"
+              className="text-small font-label uppercase tracking-wide text-text-muted"
             >
               As Featured In
             </motion.p>
@@ -135,7 +135,7 @@ function Home() {
         <div className="px-4 py-10 text-center md:px-8">
           <Link
             to="/testimonials"
-            className="link-underline inline-block text-small font-extralight uppercase tracking-wide text-primary"
+            className="link-underline inline-block text-small font-label uppercase tracking-wide text-primary"
           >
             Read all our reviews
           </Link>

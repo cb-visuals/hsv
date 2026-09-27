@@ -153,7 +153,7 @@ function Contact() {
               <Icon className="h-4 w-4" aria-hidden="true" />
             </span>
             <span>
-              <span className="block text-small font-thin uppercase tracking-wide text-text-muted">{label}</span>
+              <span className="block text-small font-label uppercase tracking-wide text-text-muted">{label}</span>
               <span className="block text-body font-extralight text-primary">{value}</span>
             </span>
           </motion.a>
@@ -162,7 +162,7 @@ function Contact() {
 
       <RevealGroup className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2">
         <motion.div variants={scrollReveal}>
-          <p className="flex items-center gap-2 text-small font-thin uppercase tracking-wide text-text-muted">
+          <p className="flex items-center gap-2 text-small font-label uppercase tracking-wide text-text-muted">
             <Clock className="h-4 w-4" aria-hidden="true" />
             Hours of Operation
           </p>
@@ -170,7 +170,7 @@ function Contact() {
           <p className="text-body text-text-muted">9am – 9pm</p>
         </motion.div>
         <motion.div variants={scrollReveal}>
-          <p className="flex items-center gap-2 text-small font-thin uppercase tracking-wide text-text-muted">
+          <p className="flex items-center gap-2 text-small font-label uppercase tracking-wide text-text-muted">
             <MapPin className="h-4 w-4" aria-hidden="true" />
             Service Areas
           </p>

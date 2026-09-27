@@ -26,7 +26,7 @@ function GoogleRating() {
     >
       <GoogleLogo className="h-6 w-6 shrink-0" />
       <div className="flex flex-col gap-1">
-        <span className="text-small font-extralight uppercase tracking-wide text-text-muted">Google Rating</span>
+        <span className="text-small font-label uppercase tracking-wide text-text-muted">Google Rating</span>
         <div className="flex items-center gap-2">
           <span className="text-body font-extralight text-primary">{RATING.toFixed(1)}</span>
           <span className="relative inline-flex" aria-hidden="true">

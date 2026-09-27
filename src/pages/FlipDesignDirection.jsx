@@ -69,7 +69,7 @@ function MediaGroup({ label, items, onSelect }) {
 
   return (
     <div>
-      <p className="text-small font-thin uppercase tracking-wide text-text-muted">{label}</p>
+      <p className="text-small font-label uppercase tracking-wide text-text-muted">{label}</p>
       <div className="mt-3 aspect-[4/3] overflow-hidden rounded-card">
         {cover ? (
           <button
@@ -86,7 +86,7 @@ function MediaGroup({ label, items, onSelect }) {
             />
             <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-2 bg-primary/0 text-bg opacity-0 transition-all duration-300 group-hover:bg-primary/30 group-hover:opacity-100">
               <Expand className="h-6 w-6" aria-hidden="true" />
-              <span className="text-small font-extralight uppercase tracking-wide">Enter Gallery</span>
+              <span className="text-small font-label uppercase tracking-wide">Enter Gallery</span>
             </div>
           </button>
         ) : (
@@ -112,7 +112,7 @@ function FlipDesignDirection() {
           <motion.div variants={scrollReveal}>
             <Link
               to="/portfolio"
-              className="inline-flex items-center gap-1 text-small font-extralight uppercase tracking-wide text-text-muted transition-colors hover:text-primary"
+              className="inline-flex items-center gap-1 text-small font-label uppercase tracking-wide text-text-muted transition-colors hover:text-primary"
             >
               Portfolio /
             </Link>
@@ -131,7 +131,7 @@ function FlipDesignDirection() {
         <RevealGroup className="mx-auto grid max-w-[1280px] grid-cols-1 gap-8 px-4 sm:grid-cols-2 md:px-8 lg:grid-cols-4">
           {phases.map((phase) => (
             <motion.div key={phase.number} variants={scrollReveal}>
-              <p className="text-small font-thin uppercase tracking-wide text-text-muted">{phase.number}</p>
+              <p className="text-small font-label uppercase tracking-wide text-text-muted">{phase.number}</p>
               <p className="mt-2 text-body font-extralight text-primary">{phase.name}</p>
               <p className="mt-2 text-body text-text-muted">{phase.description}</p>
             </motion.div>
@@ -160,7 +160,7 @@ function FlipDesignDirection() {
                   </motion.h3>
                   <motion.p
                     variants={scrollReveal}
-                    className="mt-1 text-small font-thin uppercase tracking-wide text-text-muted"
+                    className="mt-1 text-small font-label uppercase tracking-wide text-text-muted"
                   >
                     {project.type}
                   </motion.p>

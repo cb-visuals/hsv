@@ -38,7 +38,7 @@ function PortfolioCategoryPage() {
         <motion.div variants={scrollReveal}>
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-1 text-small font-extralight uppercase tracking-wide text-text-muted transition-colors hover:text-primary"
+            className="inline-flex items-center gap-1 text-small font-label uppercase tracking-wide text-text-muted transition-colors hover:text-primary"
           >
             Portfolio /
           </Link>
@@ -51,7 +51,7 @@ function PortfolioCategoryPage() {
         </motion.p>
         <motion.p
           variants={scrollReveal}
-          className="mt-4 text-small font-extralight uppercase tracking-wide text-text-muted"
+          className="mt-4 text-small font-label uppercase tracking-wide text-text-muted"
         >
           Drag the slider: same room. Different story.
         </motion.p>

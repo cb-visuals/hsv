@@ -63,7 +63,10 @@ function Testimonials() {
       </div>
 
       <section aria-label="All testimonials" className="pb-12 md:pb-24">
-        <RevealGroup className="mx-auto max-w-[1280px] columns-1 gap-4 px-4 sm:columns-2 md:px-8 xl:columns-3">
+        <RevealGroup
+          className="mx-auto max-w-[1280px] columns-1 gap-4 px-4 sm:columns-2 md:px-8 xl:columns-3"
+          viewport={{ once: true, amount: 0 }}
+        >
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.name} testimonial={testimonial} />
           ))}
