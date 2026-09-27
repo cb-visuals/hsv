@@ -56,7 +56,7 @@ const services = [
     description:
       "Stand out in a crowded market and maximize your daily rates with our turnkey Airbnb styling service. We handle every step of the process, from space planning and furniture layout to full-scale shopping, delivery coordination, and final staging. Our team knows exactly which special touches elevate guest reviews without blowing your budget. We curate durable, beautiful, and cost-effective pieces that photograph brilliantly, creating an irresistible listing that books fast and delivers maximum return on investment.",
     idealFor: "Short-Term Rentals",
-    image: null,
+    image: "/media/services/airbnb.jpg",
   },
   {
     id: "model-home-styling",
@@ -64,7 +64,7 @@ const services = [
     description:
       "Whether you need a permanent setup to welcome prospective buyers or a short-term design for an upcoming shoot, we bring your architecture to life with high-impact stylings.",
     idealFor: "Model Homes",
-    image: null,
+    image: "/media/services/model-home-styling.jpg",
   },
 ]
 
