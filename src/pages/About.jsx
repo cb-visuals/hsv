@@ -42,6 +42,8 @@ function About() {
         <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
       </Helmet>
       <SplitHero
+        mediaFirstOnMobile
+        squareOnMobile
         media={
           <PlaceholderMedia type="image" src="/media/about/portrait.jpg" alt="Portrait of Chandra Bradley" />
         }

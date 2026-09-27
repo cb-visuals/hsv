@@ -1,18 +1,34 @@
 import { motion } from "framer-motion"
 import { heroItem, staggerContainer } from "../utils/motion"
 
-function SplitHero({ media, heading, subtitle, children, mediaSide = "end" }) {
+function SplitHero({
+  media,
+  heading,
+  subtitle,
+  children,
+  mediaSide = "end",
+  mediaFirstOnMobile = false,
+  squareOnMobile = false,
+}) {
   return (
     <section className="grid grid-cols-1 md:-mt-[var(--nav-height)] md:grid-cols-2 md:items-stretch">
       <div
-        className={`order-2 aspect-[4/5] md:aspect-auto md:h-[calc(100vh-4rem)] md:w-full ${
+        className={`${mediaFirstOnMobile ? "order-1" : "order-2"} ${
+          squareOnMobile ? "px-6 py-8" : "aspect-[4/5]"
+        } md:aspect-auto md:h-[calc(100vh-4rem)] md:w-full md:px-0 md:py-0 ${
           mediaSide === "end" ? "md:order-2" : "md:order-1"
         }`}
       >
-        {media}
+        {squareOnMobile ? (
+          <div className="aspect-square overflow-hidden rounded-card md:aspect-auto md:h-full md:w-full md:overflow-visible md:rounded-none">
+            {media}
+          </div>
+        ) : (
+          media
+        )}
       </div>
       <div
-        className={`order-1 flex flex-col items-center justify-center px-6 py-12 text-center md:px-20 md:py-24 ${
+        className={`${mediaFirstOnMobile ? "order-2" : "order-1"} flex flex-col items-center justify-center px-6 py-12 text-center md:px-20 md:py-24 ${
           mediaSide === "end" ? "md:order-1" : "md:order-2"
         }`}
       >

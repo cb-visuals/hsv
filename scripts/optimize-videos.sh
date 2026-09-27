@@ -37,9 +37,15 @@ while IFS= read -r -d '' file; do
   before_size=$(stat -f%z "$file")
   out_file="${file%.mp4}.webm"
 
+  # -r 30 forces a plain constant 30fps output regardless of the source's
+  # frame rate. Some phone recordings (slo-mo capture toggled on/off) carry
+  # a variable frame rate with a 120fps timebase despite averaging ~30fps
+  # in practice — left as-is, that inconsistent rate can prevent a video's
+  # "ended" event from ever firing (surfaced as the hero carousel getting
+  # permanently stuck on that clip's last frame).
   ffmpeg -nostdin -y -loglevel error -i "$file" \
     -vf "scale='min(${MAX_DIMENSION},iw)':'min(${MAX_DIMENSION},ih)':force_original_aspect_ratio=decrease" \
-    -c:v libvpx-vp9 -crf "$CRF" -b:v 0 -deadline good -cpu-used 2 -an \
+    -r 30 -c:v libvpx-vp9 -crf "$CRF" -b:v 0 -deadline good -cpu-used 2 -an \
     "$out_file"
 
   after_size=$(stat -f%z "$out_file")
