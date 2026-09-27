@@ -34,7 +34,7 @@ function PortfolioCategoryPage() {
         description={`Browse before-and-after ${category.name.toLowerCase()} home staging transformations in Toronto and the GTA.`}
         path={`/portfolio/${category.slug}`}
       />
-      <RevealGroup>
+      <RevealGroup viewport={{ once: true, amount: 0 }}>
         <motion.div variants={scrollReveal}>
           <Link
             to="/portfolio"
