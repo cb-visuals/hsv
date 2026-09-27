@@ -28,7 +28,7 @@ function SplitHero({
         )}
       </div>
       <div
-        className={`${mediaFirstOnMobile ? "order-2" : "order-1"} flex flex-col items-center justify-center px-6 py-12 text-center md:px-20 md:py-24 ${
+        className={`${mediaFirstOnMobile ? "order-2 pb-12" : "order-1 py-12"} flex flex-col items-center justify-center px-6 text-center md:px-20 md:py-24 ${
           mediaSide === "end" ? "md:order-1" : "md:order-2"
         }`}
       >
@@ -44,7 +44,7 @@ function SplitHero({
             </motion.p>
           )}
           {children && (
-            <motion.div variants={heroItem} className="mt-8">
+            <motion.div variants={heroItem} className={heading || subtitle ? "mt-8" : undefined}>
               {children}
             </motion.div>
           )}
