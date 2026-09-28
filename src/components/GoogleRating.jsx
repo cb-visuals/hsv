@@ -7,11 +7,11 @@ import { GoogleLogo } from "./SocialIcons"
 // Places API — so this is a manual snapshot to refresh occasionally, same
 // as the "13+ years / 1000+ properties" stats above the fold.
 //
-// Last verified: 2026-08-30 (was 4.4/7 before this check — it does drift,
+// Last verified: 2026-09-28 (was 4.5/8 before this check — it does drift,
 // so re-check her profile at PROFILE_URL every so often and bump these two
 // numbers + this date).
-const RATING = 4.5
-const REVIEW_COUNT = 8
+const RATING = 4.6
+const REVIEW_COUNT = 10
 const PROFILE_URL = "https://share.google/unp9GlgH3zpbfVs9p"
 
 function GoogleRating() {

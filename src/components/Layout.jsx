@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import { Helmet } from "react-helmet-async"
 import { Outlet, useLocation } from "react-router-dom"
 import { MenuProvider } from "../context/MenuContext"
@@ -23,10 +23,29 @@ const localBusinessSchema = {
 
 function Layout() {
   const location = useLocation()
+  const isFirstRender = useRef(true)
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [location.pathname])
+
+  // The base gtag snippet in index.html already sends a page_view for the
+  // very first load — this only covers the client-side navigations after
+  // that, which a full-page tracking script would otherwise miss entirely
+  // since React Router never triggers a real page load.
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "page_view", {
+        page_path: location.pathname + location.search,
+        page_location: window.location.href,
+        page_title: document.title,
+      })
+    }
+  }, [location.pathname, location.search])
 
   return (
     <MenuProvider>
